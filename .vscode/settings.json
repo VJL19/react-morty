@@ -1,0 +1,9 @@
+{
+  "workbench.colorCustomizations": {
+    // Can customize each aspect
+    "[Visual Studio Dark - C++]": {
+      // Optional
+      "tab.activeBorderTop": "#0A84FF" // Active Tab Top Highlighting
+    }
+  }
+}

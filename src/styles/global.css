@@ -1,0 +1,167 @@
+html, body{
+    margin: 0;
+    padding: 0
+}
+
+.main--container{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav--main{
+    height: 75px;
+    box-shadow: 6px 7px 18px -10px rgba(0,0,0,0.74);
+    -webkit-box-shadow: 6px 7px 18px -10px rgba(0,0,0,0.74);
+    -moz-box-shadow: 6px 7px 18px -10px rgba(0,0,0,0.74);
+}
+.nav--container{
+    display: flex;
+    top: 0;
+    position: sticky;
+    color: black;
+    align-items: center;
+    max-width: 1580px;
+    margin: auto;
+}
+
+.nav--container ul{
+    display: flex;
+    list-style-type: none;
+    float: right;
+    margin: auto;
+    gap: 3rem 3rem;
+    font-size: 25px;
+
+}
+.nav--left {
+    display: flex;
+    margin: auto;
+    gap: 1.5rem 1.5rem;
+    width: 50%;
+    align-items: center;
+}
+.nav--left h1{
+    font-size: 1.8rem;
+}
+.morty-nav {
+    margin: auto;
+}
+.link--home, .link--fav, .link--other, .link--random{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+.link--home:hover, .link--fav:hover, .link--other:hover, .link--random:hover{
+    color: coral;
+}
+
+.main--footer{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+.navigations{
+    display: flex;
+}
+
+.main--footer > nav > .navigations {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.navigations {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    padding: 1em;
+    height: 100%;
+    background-color: aquamarine;
+    margin: 0px;
+}
+.nav--title{
+    align-items: center;
+    display: flex;
+    margin-top: auto;
+    text-align: center;
+}
+.homepage{
+    display: flex;
+}
+.homepage--content{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 15px;
+}
+.random--text{
+    font-size: 9rem;
+    font-weight: bold;
+    font-family: Open-Sans, Helvetica, sans-serif;
+}
+.random{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 15px;
+}
+.btnchar{
+    padding: 15px;
+}
+button, input{
+    cursor: pointer;
+}
+.btn-char{
+    margin: 25px 0px;
+}
+.infos {
+    list-style: none;
+    padding: 1em;
+    font-size: 20px;
+}
+.infos > ul {
+    display: list-item;
+}
+.char--name{
+    text-align: center;
+}
+.bg--img{
+    background-image: url('../images/Rick_and_Morty_title_card.png');
+    width: 100%;
+}
+.btnContainer{
+    display: block;
+    width: 260px;
+
+
+}
+.showmore, .favChar{
+    background-color: #0d6efd;
+    font-size: 18px;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0.7rem;
+    width: 100%;
+    border: none;
+}
+.favChar{
+    margin-top: 0.5rem;
+}
+.removeFav{
+    margin-top: 0.5rem;
+    background-color: red;
+    font-size: 18px;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0.7rem;
+    width: 100%;
+    border: none;
+}
