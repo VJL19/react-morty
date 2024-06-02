@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, NavLink } from "react-router-dom";
 
 const Random = ({ favChar, setFavChar }) => {
   const [setImage, setNewImage] = useState({
@@ -15,9 +14,9 @@ const Random = ({ favChar, setFavChar }) => {
   const [text, setText] = useState("");
 
   const randomPage = Math.floor(Math.random() * (44 + 1) - 1);
-  const [page, setPage] = useState({
-    setDefaultPage: `https://rickandmortyapi.com/api/character/?page=${0}`,
-  });
+  // const [page, setPage] = useState({
+  //   setDefaultPage: `https://rickandmortyapi.com/api/character/?page=${0}`,
+  // });
 
   useEffect(() => {
     let charFound = favChar?.find((char) => char.id === info.id);
@@ -27,7 +26,7 @@ const Random = ({ favChar, setFavChar }) => {
     } else {
       setText("Add");
     }
-  }, [info.id]);
+  }, [favChar, info.id]);
 
   useEffect(() => {
     let charFound = favChar?.find((char) => char.id === setImage.setId);
@@ -37,7 +36,7 @@ const Random = ({ favChar, setFavChar }) => {
     } else {
       setText("Add");
     }
-  }, [favChar || setImage.setId]);
+  }, [favChar, setImage.setId]);
 
   useEffect(() => {
     axios
@@ -59,7 +58,7 @@ const Random = ({ favChar, setFavChar }) => {
         filter.forEach((item) => setInfo(item));
         console.log("in use effect", filter);
       });
-  }, [setImage.setId]);
+  }, [setImage.setName, setImage.setId]);
 
   function handleClick() {
     const RandomNumber = Math.floor(Math.random() * setMeme.length);
@@ -74,11 +73,11 @@ const Random = ({ favChar, setFavChar }) => {
         setId: newId,
       };
     });
-    setPage((prevPage) => {
-      return {
-        setDefaultPage: `https://rickandmortyapi.com/api/character/?page=${randomPage}`,
-      };
-    });
+    // setPage((prevPage) => {
+    //   return {
+    //     setDefaultPage: `https://rickandmortyapi.com/api/character/?page=${randomPage}`,
+    //   };
+    // });
   }
 
   const [button, setButton] = React.useState(false);
@@ -107,7 +106,7 @@ const Random = ({ favChar, setFavChar }) => {
         <h1 className="random--text">?</h1>
       ) : (
         <div>
-          <img alt="a random image" src={setImage.randomImage} />
+          <img alt="a random character" src={setImage.randomImage} />
           <h1 className="char--name">{setImage.setName}</h1>
         </div>
       )}

@@ -65,7 +65,7 @@ export default function App() {
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, [state.pageNum]);
+  }, [API_URL]);
 
   useEffect(() => {
     localStorage.setItem("favChar", JSON.stringify(state.favChar));
@@ -83,7 +83,6 @@ export default function App() {
     // setPagenum((prev) => prev + 1)
   };
 
-  const { favchar } = state;
   const getFavChar = state.favChar.map((char) => {
     return (
       <Favorite
