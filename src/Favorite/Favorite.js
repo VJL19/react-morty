@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import "../styles/global.css";
 
 const Favorite = ({
@@ -13,14 +12,13 @@ const Favorite = ({
   favChar,
 }) => {
   const [infos, setInfos] = useState(false);
-  const [toggleBtn, setToggleBtn] = useState(false);
 
   const handleShow = () => {
     setInfos((prevInfo) => !prevInfo);
   };
 
   const removeFav = (id) => {
-    let charFound = false;
+    // let charFound = false;
     // const conf = window.confirm('Are you sure ? removing this character from your favorite?');
     // if(conf){
     //     localStorage.removeItem(name);

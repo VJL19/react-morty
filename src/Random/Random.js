@@ -27,7 +27,7 @@ const Random = ({ favChar, setFavChar }) => {
     } else {
       setText("Add");
     }
-  }, [favChar]);
+  }, [info.id]);
 
   useEffect(() => {
     let charFound = favChar?.find((char) => char.id === setImage.setId);
@@ -37,7 +37,7 @@ const Random = ({ favChar, setFavChar }) => {
     } else {
       setText("Add");
     }
-  }, [setImage.randomImage]);
+  }, [favChar || setImage.setId]);
 
   useEffect(() => {
     axios
@@ -45,7 +45,7 @@ const Random = ({ favChar, setFavChar }) => {
       .then((res) => {
         setAllMemes(res.data.results);
       });
-  }, [page.setDefaultPage]);
+  }, [randomPage]);
 
   useEffect(() => {
     axios
@@ -59,7 +59,7 @@ const Random = ({ favChar, setFavChar }) => {
         filter.forEach((item) => setInfo(item));
         console.log("in use effect", filter);
       });
-  }, [setImage.setName]);
+  }, [setImage.setId]);
 
   function handleClick() {
     const RandomNumber = Math.floor(Math.random() * setMeme.length);
@@ -103,16 +103,16 @@ const Random = ({ favChar, setFavChar }) => {
 
   return (
     <div className="random">
-      {setImage.randomImage == "?" ? (
+      {setImage.randomImage === "?" ? (
         <h1 className="random--text">?</h1>
       ) : (
         <div>
-          <img src={setImage.randomImage} />
+          <img alt="a random image" src={setImage.randomImage} />
           <h1 className="char--name">{setImage.setName}</h1>
         </div>
       )}
       {!button ? (
-        setImage.randomImage == "?" ? (
+        setImage.randomImage === "?" ? (
           <></>
         ) : (
           <>

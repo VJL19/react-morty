@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 import axios from "axios";
 import "./styles/global.css";
@@ -76,9 +76,6 @@ export default function App() {
 
     dispatch({ type: "SET_INFO", payload: !state.infos });
   };
-  function handleShow() {
-    dispatch({ type: "SET_INFO", payload: !state.infos });
-  }
 
   const handleNext = (evt) => {
     dispatch({ type: "SET_PAGE", payload: state.pageNum + 1 });
