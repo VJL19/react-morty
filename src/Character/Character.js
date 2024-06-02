@@ -27,7 +27,7 @@ const Character = ({
       setText("Add");
       setColor("#0d6efd");
     }
-  }, [favChar]);
+  }, [favChar, id]);
 
   const handlePrev = () => {
     let charFound = favChar?.find((char) => char.id === id);
