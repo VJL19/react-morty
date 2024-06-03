@@ -104,7 +104,7 @@ export default function App() {
 
       {!loading && (
         <>
-          <div style={{ display: "block", width: "100%" }}>
+          <div style={{ display: "block", width: "100%", margin: "auto" }}>
             <input
               value={search}
               type="search"
@@ -158,7 +158,7 @@ export default function App() {
       <Nav />
       <div className="main--container">
         <Routes>
-          <Route path="" element={displayChar}></Route>
+          <Route path="./" element={displayChar}></Route>
           {state.items.map((item) => (
             <Route
               key={item.id}
@@ -166,12 +166,12 @@ export default function App() {
               element={displayCharInfo}
             ></Route>
           ))}
-          <Route path="favorite" element={getFavChar}></Route>
+          <Route path="./favorite" element={getFavChar}></Route>
           <Route
-            path="random"
+            path="./random"
             element={<Random favChar={state.favChar} setFavChar={dispatch} />}
           ></Route>
-          <Route path="other" element={<Other />}></Route>
+          <Route path="./other" element={<Other />}></Route>
         </Routes>
       </div>
     </>
