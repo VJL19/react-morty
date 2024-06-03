@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-morty/static/css/main.54536f31.css",
-    "main.js": "/react-morty/static/js/main.a18eacf5.js",
+    "main.js": "/react-morty/static/js/main.8a85a5f4.js",
     "static/media/Rick_and_Morty_title_card.png": "/react-morty/static/media/Rick_and_Morty_title_card.2af0627246b76c42c7f2.png",
     "static/media/rick-and-morty-wazzaldorp-deviantart-34.png": "/react-morty/static/media/rick-and-morty-wazzaldorp-deviantart-34.a47aaea943c1fb0a2da3.png",
     "index.html": "/react-morty/index.html",
     "main.54536f31.css.map": "/react-morty/static/css/main.54536f31.css.map",
-    "main.a18eacf5.js.map": "/react-morty/static/js/main.a18eacf5.js.map"
+    "main.8a85a5f4.js.map": "/react-morty/static/js/main.8a85a5f4.js.map"
   },
   "entrypoints": [
     "static/css/main.54536f31.css",
-    "static/js/main.a18eacf5.js"
+    "static/js/main.8a85a5f4.js"
   ]
 }
